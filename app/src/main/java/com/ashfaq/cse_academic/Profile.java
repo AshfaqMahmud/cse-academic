@@ -2,11 +2,20 @@ package com.ashfaq.cse_academic;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +23,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Profile extends Fragment {
-
+    TextView tname,troll,tphone,tmail,trole;
+    FirebaseDatabase rootnode =FirebaseDatabase.getInstance();
+    DatabaseReference reference= rootnode.getReferenceFromUrl("https://cse-academic-92d65-default-rtdb.firebaseio.com/");
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +70,43 @@ public class Profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        tname = view.findViewById(R.id.tname);
+        trole = view.findViewById(R.id.trole);
+        tmail = view.findViewById(R.id.tmail);
+        troll = view.findViewById(R.id.troll);
+        tphone = view.findViewById(R.id.tphone);
+
+        Bundle data = this.getArguments();
+        //if (data != null)
+        //
+        //{
+        //String tmp= data.getString("groll");
+        String mystr="1807098";
+            reference.child("users").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    //String name = snapshot.child(mystr).child("name").getValue(String.class);
+                    String mail = snapshot.child(mystr).child("mail").getValue(String.class);
+                    String phone = snapshot.child(mystr).child("phone").getValue(String.class);
+                    String roll = snapshot.child(mystr).child("roll").getValue(String.class);
+                    String role = snapshot.child(mystr).child("role").getValue(String.class);
+
+                    //tname.setText(tmp);
+                    tmail.setText(mail);
+                    tphone.setText(phone);
+                    trole.setText(role);
+                    troll.setText(roll);
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        //}
+        return view;
     }
 }

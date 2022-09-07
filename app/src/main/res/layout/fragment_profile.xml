@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile"
-    android:orientation="vertical">
+    android:background="@drawable/bg"
+    tools:context=".Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="350dp"
@@ -14,8 +18,9 @@
         <LinearLayout
             android:layout_width="300dp"
             android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="60dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="60dp"
             android:layout_marginBottom="60dp"
             android:background="@drawable/backgroun_round"
@@ -37,6 +42,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_slab"
                 android:text="Wiliam Snoe"
+                android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -45,13 +51,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="265dp"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/backgroun_round"
         android:orientation="vertical"
-        android:paddingTop="15dp">
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,10 +72,11 @@
                 android:fontFamily="@font/roboto_slab"
                 android:includeFontPadding="true"
                 android:text="Email"
-                android:textSize="18sp" />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/temail"
+                android:id="@+id/tmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -76,7 +84,8 @@
                 android:includeFontPadding="true"
                 android:paddingLeft="20dp"
                 android:text="abcd@email.com"
-                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -93,10 +102,11 @@
                 android:fontFamily="@font/roboto_slab"
                 android:includeFontPadding="true"
                 android:text="Phone"
-                android:textSize="18sp" />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tphoneno"
+                android:id="@+id/tphone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -104,7 +114,8 @@
                 android:includeFontPadding="true"
                 android:paddingLeft="20dp"
                 android:text="+266 225 225"
-                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -121,7 +132,8 @@
                 android:fontFamily="@font/roboto_slab"
                 android:includeFontPadding="true"
                 android:text="Role"
-                android:textSize="18sp" />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/trole"
@@ -132,7 +144,8 @@
                 android:includeFontPadding="true"
                 android:paddingLeft="20dp"
                 android:text="Add to group"
-                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -149,7 +162,8 @@
                 android:fontFamily="@font/roboto_slab"
                 android:includeFontPadding="true"
                 android:text="Roll"
-                android:textSize="18sp" />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/troll"
@@ -160,7 +174,8 @@
                 android:includeFontPadding="true"
                 android:paddingLeft="20dp"
                 android:text="1807098"
-                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -182,8 +197,8 @@
                 android:backgroundTint="#CDDC39"
                 android:fontFamily="@font/roboto_slab"
                 android:text="Update"
-                android:textStyle="bold"
-                />
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/delete"
@@ -192,12 +207,13 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:backgroundTint="#F44336"
-                android:textStyle="bold"
                 android:fontFamily="@font/roboto_slab"
-                android:text="Delete" />
+                android:text="Delete"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
+    </LinearLayout>
 
-
-</LinearLayout>
+</FrameLayout>
