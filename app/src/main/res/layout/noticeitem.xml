@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="20dp"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="#64DD17"
+    app:cardCornerRadius="8dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tnotice"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:maxWidth="270dp"
+        android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+</LinearLayout>
+
+    <ImageButton
+        android:id="@+id/delnotice"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/ic_baseline_delete_24"
+        android:visibility="gone"
+        tools:ignore="SpeakableTextPresentCheck" />
+</LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

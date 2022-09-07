@@ -5,12 +5,15 @@
       <map>
         <entry key="..\:/cse_academic2/app/src/main/res/drawable-v24/backgroun_round2.xml" value="0.2115" />
         <entry key="..\:/cse_academic2/app/src/main/res/drawable/backgroun_round.xml" value="0.2115" />
+        <entry key="..\:/cse_academic2/app/src/main/res/drawable/backgroun_round3.xml" value="0.169" />
         <entry key="..\:/cse_academic2/app/src/main/res/drawable/roun_bg.xml" value="0.2105" />
         <entry key="..\:/cse_academic2/app/src/main/res/layout/activity_login.xml" value="0.12894736842105264" />
         <entry key="..\:/cse_academic2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/cse_academic2/app/src/main/res/layout/activity_registration.xml" value="0.18" />
-        <entry key="..\:/cse_academic2/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
-        <entry key="..\:/cse_academic2/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/cse_academic2/app/src/main/res/layout/fragment_home.xml" value="0.1361111111111111" />
+        <entry key="..\:/cse_academic2/app/src/main/res/layout/fragment_notice.xml" value="0.12894736842105264" />
+        <entry key="..\:/cse_academic2/app/src/main/res/layout/fragment_profile.xml" value="0.12894736842105264" />
+        <entry key="..\:/cse_academic2/app/src/main/res/layout/noticeitem.xml" value="0.22" />
       </map>
     </option>
   </component>
