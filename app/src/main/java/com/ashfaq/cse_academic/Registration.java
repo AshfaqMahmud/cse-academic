@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Registration extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference reference= database.getReferenceFromUrl("https://cse-academic-c58b7-default-rtdb.firebaseio.com/");
+    DatabaseReference reference= database.getReference();
     EditText tname,temail,troll,tpass,tcpass,tphone;
     Button button;
     String role;
@@ -52,13 +52,31 @@ public class Registration extends AppCompatActivity {
                     Toast.makeText(Registration.this,"One or more fields are empty",Toast.LENGTH_SHORT).show();
                 else
                 {
-                    email=email+"@stud.kuet.ac.bd";
+                    String mail=email+"@stud.kuet.ac.bd";
                     if(pass.equals(cpass))
                     {
                         reference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if(snapshot.hasChild(roll))
+                                {
+                                    Toast.makeText(Registration.this,"ROLL already registered in database",Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                {
 
+                                    reference.child("users").child(roll).child("name").setValue(fname);
+                                    reference.child("users").child(roll).child("mail").setValue(mail);
+                                    reference.child("users").child(roll).child("roll").setValue(roll);
+                                    reference.child("users").child(roll).child("password").setValue(pass);
+                                    reference.child("users").child(roll).child("phone").setValue(phone);
+                                    reference.child("users").child(roll).child("role").setValue(role);
+
+                                    Toast.makeText(Registration.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(Registration.this,Login.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
                             }
 
                             @Override
@@ -67,17 +85,6 @@ public class Registration extends AppCompatActivity {
                             }
                         });
 
-                        reference.child("users").child(roll).child("name").setValue(fname);
-                        reference.child("users").child(roll).child("mail").setValue(email);
-                        reference.child("users").child(roll).child("roll").setValue(roll);
-                        reference.child("users").child(roll).child("password").setValue(pass);
-                        reference.child("users").child(roll).child("phone").setValue(phone);
-                        reference.child("users").child(roll).child("role").setValue(role);
-
-                        Toast.makeText(Registration.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent=new Intent(Registration.this,Login.class);
-                        startActivity(intent);
-                        finish();
                     }
                     else
                     {
