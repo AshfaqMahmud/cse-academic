@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Registration extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference reference= database.getReferenceFromUrl("https://cse-academic-92d65-default-rtdb.firebaseio.com/");
+    DatabaseReference reference= database.getReferenceFromUrl("https://cse-academic-c58b7-default-rtdb.firebaseio.com/");
     EditText tname,temail,troll,tpass,tcpass,tphone;
     Button button;
     String role;

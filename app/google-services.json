@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "256318830208",
-    "project_id": "cse-academic-92d65",
-    "storage_bucket": "cse-academic-92d65.appspot.com"
+    "project_number": "404745344061",
+    "firebase_url": "https://cse-academic-c58b7-default-rtdb.firebaseio.com",
+    "project_id": "cse-academic-c58b7",
+    "storage_bucket": "cse-academic-c58b7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:256318830208:android:3957d6c1c86d1dae58d865",
+        "mobilesdk_app_id": "1:404745344061:android:b697835007b2b4757a8654",
         "android_client_info": {
           "package_name": "com.ashfaq.cse_academic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "256318830208-nu2nm12q4oatq3fl4m2ddff93ahs0hok.apps.googleusercontent.com",
+          "client_id": "404745344061-33538tdp851geqfdipqcj336umb58fha.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNuYsCd1ZoOip869mCXZa-E4ou91c6e3I"
+          "current_key": "AIzaSyDfBVjBC_0qpTVrOTLihG3QQMu9eDJMmGU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "256318830208-nu2nm12q4oatq3fl4m2ddff93ahs0hok.apps.googleusercontent.com",
+              "client_id": "404745344061-33538tdp851geqfdipqcj336umb58fha.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
