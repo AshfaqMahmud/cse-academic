@@ -105,7 +105,7 @@ public class Registration extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.rbutton1:
                 if (checked) {
-                    role="Class Representatives";
+                    role="Class Representative";
                 }
                     break;
             case R.id.rbutton2:

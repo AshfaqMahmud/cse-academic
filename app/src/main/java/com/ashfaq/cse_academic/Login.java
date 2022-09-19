@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -64,9 +65,14 @@ public class Login extends AppCompatActivity {
                                     startActivity(intent);
 
                                     //writing data in sharedpreferences
+                                    String role=snapshot.child(roll).child("role").getValue(String.class);
+                                    String name=snapshot.child(roll).child("name").getValue(String.class);
+                                    //Log.d("tag", "Value: " + role);
                                     SharedPreferences sharedPreferences = getSharedPreferences("user-db", Context.MODE_PRIVATE);
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                     editor.putString("user-roll",roll);
+                                    editor.putString("user-role",role);
+                                    editor.putString("user-name",name);
                                     editor.commit();
 
                                     finish();
